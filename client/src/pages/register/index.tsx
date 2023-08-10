@@ -1,7 +1,3 @@
-// function Register(props: any) {}
-
-// export { Register };
-
 import { Button } from "baseui/button";
 import {
   HeadingXXLarge,
@@ -14,16 +10,14 @@ import {
   StyledInput,
 } from "../commons";
 
-// import { useSignIn } from "react-auth-kit";
 import { useFormik } from "formik";
 import axios, { AxiosError } from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-function Register(props: any) {
+function Register() {
   const navigate = useNavigate(); // Get the navigate function
   const [error, setError] = useState("");
-  // const signIn = useSignIn();
 
   const onSubmit = async (values: any) => {
     setError("");
@@ -34,13 +28,6 @@ function Register(props: any) {
         values
       );
       console.log(response);
-      // signIn({
-      //   token: response.data.token,
-      //   expiresIn: 3600,
-      //   tokenType: "Bearer",
-      //   authState: { email: values.email },
-      // });
-
       navigate("/login");
     } catch (err) {
       if (err && err instanceof AxiosError)

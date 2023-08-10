@@ -5,25 +5,16 @@ import { useSignOut } from "react-auth-kit";
 import { Link, useNavigate } from "react-router-dom";
 import { Container } from "../commons";
 import {useIsAuthenticated} from 'react-auth-kit';
-import {useAuthUser} from 'react-auth-kit'
 
 function Home() {
   const singOut = useSignOut();
   const navigate = useNavigate();
   const isAuthenticated = useIsAuthenticated()
-  const auth = useAuthUser()
 
   const logout = () => {
     singOut();
     navigate("/login");
   };
-
-  // const getPayment = async () => {
-  //   const response = await axios.get("http://localhost:9000/api/v1/payment", {
-  //     withCredentials: true,
-  //   });
-  //   console.log("Response: ", response);
-  // };
 
   return (
     <Container>
