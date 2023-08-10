@@ -27,7 +27,8 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/user/login",
+        // "http://localhost:3000/user/login",
+        "http://54.179.147.148:3000/user/login",
         values
       );
 

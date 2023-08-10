@@ -24,7 +24,8 @@ function Register() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/user/register",
+        // "http://localhost:3000/user/register",
+        "http://54.179.147.148:3000/user/register",
         values
       );
       console.log(response);
