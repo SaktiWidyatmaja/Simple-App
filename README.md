@@ -35,7 +35,7 @@ This web app provides a user authentication system with login, registration, and
 
 - **POST /user/register**: Register a new user
 - **POST /user/login**: Authenticate user and provide a JWT token
-- **GET /user/delete/{username}**: Protected route, requires JWT authentication
+- **GET /user/delete/{username}**: delete user account
 
 ## API Testing
 
