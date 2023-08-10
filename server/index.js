@@ -1,8 +1,16 @@
 const mongoose = require('mongoose');
 const express = require('express');
 require('dotenv').config()
+const cors = require('cors'); // Import cors module
+var corsOptions = {
+  // origin: 'http://127.0.0.1', // Ganti dengan alamat origin yang diizinkan
+  origin: "*", // Ganti dengan alamat origin yang diizinkan
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 const app = express();
+app.use(cors(corsOptions));
 
 // Connect to local db
 mongoose.connect(process.env.DB_URL, {
