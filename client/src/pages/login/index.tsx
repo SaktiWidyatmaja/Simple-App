@@ -17,7 +17,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
-function Login(props: any) {
+function Login() {
   const navigate = useNavigate(); // Get the navigate function
   const [error, setError] = useState("");
   const signIn = useSignIn();
