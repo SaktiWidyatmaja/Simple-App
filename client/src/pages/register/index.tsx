@@ -50,7 +50,7 @@ function Register() {
 
   return (
     <Container>
-      <InnerContainer>
+      <InnerContainer style={{ padding: '3rem 4rem' }}>
         <form onSubmit={formik.handleSubmit}>
           <HeadingXXLarge>Create Account</HeadingXXLarge>
           <ErrorText>{error}</ErrorText>
